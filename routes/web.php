@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('create_product');
 });
+
+Route::post('store',['as' => 'product.store', 'uses' => 'ProductController@insert']);
